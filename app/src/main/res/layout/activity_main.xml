@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainActivityBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/appToolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#000033FF"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewGeneratedPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="#FF0000"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <Button
+        android:id="@+id/buttonGeneratePassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#4CAF50"
+        android:onClick="generateRandomPassword"
+        android:text="Oluştur"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.75" />
+
+    <ImageButton
+        android:id="@+id/buttonCopyGenerated"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:background="#00FFFFFF"
+        android:onClick="copyGeneratedPassword"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/appToolbar"
+        app:layout_constraintEnd_toEndOf="@+id/appToolbar"
+        app:layout_constraintHorizontal_bias="0.89"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?attr/actionModeCopyDrawable"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textViewGeneratedPasswordLength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="16"
+        android:textColor="#FFFFFF"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonGeneratePassword" />
+
+    <TextView
+        android:id="@+id/buttonHigherLength"
+        android:layout_width="75dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:onClick="higherLength"
+        android:text="+"
+        android:textAlignment="center"
+        android:textColor="#4CAF50"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewGeneratedPasswordLength"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.165"
+        app:layout_constraintStart_toEndOf="@+id/textViewGeneratedPasswordLength"
+        app:layout_constraintTop_toTopOf="@+id/textViewGeneratedPasswordLength"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/buttonLowerLength"
+        android:layout_width="75dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:onClick="lowerLength"
+        android:text="-"
+        android:textAlignment="center"
+        android:textColor="#4CAF50"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewGeneratedPasswordLength"
+        app:layout_constraintEnd_toStartOf="@+id/textViewGeneratedPasswordLength"
+        app:layout_constraintHorizontal_bias="0.844"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewGeneratedPasswordLength"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
