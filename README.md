@@ -5,4 +5,5 @@ Features
 - No trackers, ads or stuff like that
 - Free to use
 
-  
+First accessable version is here: https://github.com/ofkarademir/pwdgen/releases/tag/pre-release
+
